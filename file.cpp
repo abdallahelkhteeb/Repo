@@ -1,16 +1,21 @@
 #include<iostream> 
+#include <string>
+#include <set>
 using namespace std;
 
 
 
 
 int main() {
-    cout << "Enter the first number : ";
-    int num1, num2;
-    cin >> num1;
-    cout << "\nEnter the second number : ";
-    cin << num2;
+    int n, ans = 0;
+    string s;
+    cin >> n >> s;
+    set<int> st;
+    for(int i = 0; i < n; ++i) {
+        st.insert(s[i]);
+        ans += st.size();
+    }
 
-    cout << "The summation of the first and the second numebr is: " << num1 + num2 << endl;
+    cout << ans << endl;
     return 0;
 }
